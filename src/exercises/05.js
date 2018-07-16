@@ -1,19 +1,23 @@
 // prop collections
 
 import React from 'react'
-import {Switch} from '../switch'
+import { Switch } from '../switch'
 
 class Toggle extends React.Component {
-  state = {on: false}
+  state = { on: false }
   toggle = () =>
     this.setState(
-      ({on}) => ({on: !on}),
+      ({ on }) => ({ on: !on }),
       () => this.props.onToggle(this.state.on),
     )
   getStateAndHelpers() {
     return {
       on: this.state.on,
       toggle: this.toggle,
+      togglerProps: {
+        'aria-pressed': this.state.on,
+        'onClick': this.toggle
+      }
       // In our last usage example, you'll notice that we had some
       // common props (`onClick`, and we're also missing `aria-pressed`
       // value on the `button`). Because most users will want these
@@ -38,7 +42,7 @@ function Usage({
 }) {
   return (
     <Toggle onToggle={onToggle}>
-      {({on, togglerProps}) => (
+      {({ on, togglerProps }) => (
         <div>
           <Switch on={on} {...togglerProps} />
           <hr />
@@ -52,4 +56,4 @@ function Usage({
 }
 Usage.title = 'Prop Collections'
 
-export {Toggle, Usage as default}
+export { Toggle, Usage as default }
