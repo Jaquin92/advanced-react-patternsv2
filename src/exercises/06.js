@@ -37,7 +37,7 @@ class Toggle extends React.Component {
           },
           ...props
         }
-      }
+      }, Chicken: (args) => <Switch {...args} />
     }
   }
   render() {
@@ -54,9 +54,9 @@ function Usage({
 }) {
   return (
     <Toggle onToggle={onToggle}>
-      {({ on, getTogglerProps }) => (
+      {({ on, getTogglerProps, Chicken }) => (
         <div>
-          <Switch {...getTogglerProps({ on })} />
+          <Chicken {...getTogglerProps({ on })} />
           <hr />
           <button
             {...getTogglerProps({
