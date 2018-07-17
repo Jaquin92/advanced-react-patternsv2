@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1531677133171" clover="3.2.0">
-  <project timestamp="1531677133171" name="All files">
+<coverage generated="1531751020585" clover="3.2.0">
+  <project timestamp="1531751020585" name="All files">
     <metrics statements="411" coveredstatements="171" conditionals="152" coveredconditionals="60" methods="289" coveredmethods="135" elements="852" coveredelements="366" complexity="0" loc="411" ncloc="411" packages="1" files="21" classes="21">
       <file name="01.js" path="/Users/jonathan/Desktop/advanced-react-patternsv2/src/exercises-final/01.js">
         <metrics statements="8" coveredstatements="7" conditionals="1" coveredconditionals="0" methods="6" coveredmethods="5"/>
